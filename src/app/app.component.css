@@ -1,0 +1,9 @@
+p {
+  font-family: Lato;
+}
+.bg{ 
+  background-size:100% 100%;
+  height: 150vh;
+  background-image:url('https://res.cloudinary.com/cdnsnipped/image/upload/v1572113964/zoltan-tasi-dLQcJmMLB0E-unsplash.jpg');
+  background-position:top center;
+}

@@ -1,0 +1,46 @@
+
+<div *ngIf="loading" class="spinner"></div>
+
+<div class="container" *ngIf="displayForm">
+  <br><br>
+    <div class="text-center"><h1 [ngStyle]="{'font-size': largeScreen ? '2.7rem' : '1.5rem'}" >You are just a few steps away from a sponsor!</h1></div>
+    <form (ngSubmit)="onSubmit(eventDetailsForm)" #eventDetailsForm="ngForm">
+      <h3 [ngStyle]="{'font-size': largeScreen ? '2.3rem' : '1.3rem'}">Your details</h3>
+      <div class="form-group">
+        <!-- <label for="mangerName">Your Name</label> -->
+        <input [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="text" class="form-control" name="managerName" placeholder="Your Name" required [(ngModel)]="model.managerName" #managerName="ngModel">
+        <!-- <div *ngIf="managerName.errors.required && managerName.touched"
+            class="alert alert-danger">
+            <div>Name is required</div>
+        </div> -->
+
+        <!-- <label for="mangerEmail">Your Email</label> -->
+        <input [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="email" class="form-control" name="managerEmail" placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required [(ngModel)]="model.managerEmail">
+
+        <!-- <label for="mangerPhone">Your Email</label> -->
+        <input [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="tel" class="form-control" name="managerPhone" placeholder="Your 10-digit Mobile" ng-minlength="10" ng-maxlength="10" pattern="^\d{10}$" required [(ngModel)]="model.managerPhone" #managerPhone="ngModel"> 
+      </div>
+
+      <h3 [ngStyle]="{'font-size': largeScreen ? '2.3rem' : '1.3rem'}">Event details</h3>
+      <div class="form-group">
+        <!-- <label for="eventName">Your Email</label> -->
+        <input [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="text" class="form-control" name="eventName" placeholder="Event Name" required [(ngModel)]="model.eventName">
+
+        <!-- <label for="eventDesc">Your Email</label> -->
+        <textarea [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="textarea" class="form-control" name="eventDesc" placeholder="Event Description (in 2-3 lines)" required></textarea>
+
+        <!-- <label for="eventLink">Link to your event's social media page</label> -->
+        <input [ngStyle]="{'width': largeScreen ? '100%' : '100%'}" type="text" class="form-control" name="eventLink" placeholder="Event's FB or IG Page link" required [(ngModel)]="model.eventLink">
+
+      </div>
+
+      <button [ngStyle]="{'width': largeScreen ? '100%' : '100%'}"  type="submit" class="btn btn-pri" [disabled]="!eventDetailsForm.form.valid">Submit</button>
+    </form>
+</div>
+<div class="container text-center thanksContainer" *ngIf="displayThanks">
+  <div class="text-center"><h1 [ngStyle]="{'font-size': largeScreen ? '2.7rem' : '1.5rem'}" >Your details are with us!</h1>
+  <fa-icon [icon]="faCheckCircle" (click)="openNav()" class="check"></fa-icon>
+  <h3 [ngStyle]="{'font-size': largeScreen ? '2.3rem' : '1.3rem'}">Our team will get back to you soon.</h3></div>
+</div>
+<app-footer *ngIf="displayThanks" [ngStyle]="{'position':'absolute', left:0, right:0, 'top':'60%'}"></app-footer>
+<app-footer *ngIf="displayForm"></app-footer>

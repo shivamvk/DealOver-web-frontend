@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Caveat|Righteous&display=swap');
+
+h1{
+  color: whitesmoke;
+  font-family: Caveat;
+  font-weight: bold;
+}
+
+p{
+  color: whitesmoke;
+  font-family: Handlee;
+  font-weight: bold;
+}

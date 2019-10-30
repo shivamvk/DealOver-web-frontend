@@ -1,0 +1,34 @@
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css?family=Handlee|Caveat|Righteous&display=swap');
+
+.btn-pri{
+  color:whitesmoke;
+  background-color: black;
+  font-family: Handlee;
+}
+
+.btn-pri:hover{
+  color:black;
+  background-color: white;
+  font-family: Handlee;
+}
+
+.btn-sec{
+  color:black;
+  background-color: white;
+  font-family: Handlee;
+}
+
+.btn-sec:hover{
+  color:whitesmoke;
+  background-color: black;
+  font-family: Handlee;
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

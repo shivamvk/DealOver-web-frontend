@@ -1,0 +1,13 @@
+<div class="container home-desc">
+  <h2 [ngStyle]="{'font-size': largeScreen ? '3.5rem' : '2rem'}" class="home-main-text">
+    In search of a sponsor for your event?
+    Your search ends here! Just tell us about your event and we'll do the magic.
+  </h2>
+</div>
+
+<div [ngStyle]="{'top': largeScreen? '80%':'70%'}" class="container btn-group">
+    <button [routerLink]="['/create-event']" class="btn btn-pri btn-pri-hover">Tell us about your event</button>
+    <button [routerLink]="['/about']" class="btn btn-sec">Know more about us</button>
+</div>
+
+<app-footer [ngStyle]="{'position':'absolute', left:0, right:0, 'top':'100%'}"></app-footer>

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Handlee|Caveat|Righteous&display=swap');
+
+.home-main-text{
+  color:aliceblue;
+  font-family: Handlee;
+  font-weight: bold;
+  text-align: center;
+}
+
+.home-desc{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top:35%;
+}
+
+.btn-group{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+

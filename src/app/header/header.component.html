@@ -1,0 +1,18 @@
+<br>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <a [routerLink]="['/']" (click)="closeNav()" href="#">Home</a>
+  <a [routerLink]="['/about']" (click)="closeNav()" href="#">About</a>
+  <a [routerLink]="['/create-event']" (click)="closeNav()" href="#">Create Event</a>
+  <a href="#">Past events</a>
+  <a href="#">Contact us</a>
+</div>
+
+<fa-icon [icon]="faBars" (click)="openNav()" class="hamburger"></fa-icon>
+
+<div class="container text-center">
+  <div class="column">
+    <h2 class="logo-name">Deal Over</h2>
+    <h3 class="logo-slogan">Where magic happens!</h3>
+  </div>
+</div>
